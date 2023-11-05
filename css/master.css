@@ -634,7 +634,7 @@ ul {
     position: absolute;
     left: 0;
     top: 50%;
-    width: 14px;
+    width: 15px;
     height: 14px;
     border: 2px solid var(--gray-color);
     margin-top: -8px;
@@ -684,18 +684,18 @@ ul {
     top: 50%;
     left: 0;
     margin-top: -11px;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 19px;
     border: 2px solid var(--gray-color);
     border-radius: 50%;
 }
 .backup-control .date label::after {
     content: "";
     position: absolute;
-    left: 4px;
-    top: 4px;
-    width: 12px;
-    height: 12px;
+    left: 3px;
+    top: 50%;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
     background-color: var(--blue-color);
     transform: scale(0);
@@ -705,7 +705,7 @@ ul {
     border-color: var(--blue-color);
 }
 .backup-control .date input[type='radio']:checked + label::after {
-    transform: scale(1);
+    transform: scale(1) translateY(-50%);
 }
 /* End Widgets Control */
 /* Start Backup Manger */
@@ -1049,6 +1049,17 @@ ul {
 .friends-page .friend .info i { 
     margin-right: 5px;
 }
+@media (max-width: 400px) {
+    .friends-page .friend .friends-foot {
+        align-items: center;
+    }
+    .friends-page .friend .custom {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+    }   
+}
 /* End Friends-Page */
 /* Start Files-page */
 .files-page {
@@ -1081,7 +1092,12 @@ ul {
     border-top: 1px solid #eee;
 }
 .files-page .file-statics {
-    min-width: 260px;
+    min-width: 200px;
+}
+@media (min-width: 767px) {
+    .files-page .file-statics {
+        min-width: 260px;
+    }
 }
 .files-page .file-statics .stats {
     border: 1px solid #eee;
